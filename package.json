@@ -1,6 +1,6 @@
 {
   "name": "nestjs-clean-arch-cli",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -16,8 +16,8 @@
   "author": "",
   "license": "ISC",
   "bin": {
-    "nest-clean-arch-cli": "./index.js",
-    "nca": "./index.js"
+    "nest-clean-arch-cli": "index.js",
+    "nca": "index.js"
   },
   "dependencies": {
     "@nestjs/cli": "^10.3.0",
