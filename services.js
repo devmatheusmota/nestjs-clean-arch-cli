@@ -16,7 +16,7 @@ export const initService = async (projectName, options) => {
     `Starting a new NestJS project: ${projectName} with ${packageManager}...`
   );
   await createProject(projectName, packageManager);
-  await installDependencies(packageManager);
+  await installDependencies(packageManager, projectName);
   await setupProjectStructure(projectName, orm, packageManager);
   console.log("Project ready!");
 };
@@ -48,12 +48,16 @@ async function createProject(projectName, packageManager) {
   );
 }
 
-async function installDependencies(packageManager) {
+async function installDependencies(packageManager, projectName) {
+  const projectPath = `${process.cwd()}/${projectName}`;
+
+  process.chdir(projectPath);
   await runCommandWithExitOnError(
     packageManager,
     ["install", "@nestjs/config", "--save"],
     "Failed to install dependencies"
   );
+  process.chdir("..");
 }
 
 async function setupProjectStructure(projectName, ormOption, packageManager) {

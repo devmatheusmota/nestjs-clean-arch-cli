@@ -61,11 +61,11 @@ export async function createPrismaStructure(projectPath, packageManager) {
   await initPrisma(projectPath);
   await createDirectories(prismaDirectories, projectPath);
   await createFiles(projectPath, [
-    { path: "/src/core/infra/lib/prisma.service.ts", content: prismaServiceTS },
+    { path: "/src/infra/lib/prisma.service.ts", content: prismaServiceTS },
     { path: "/prisma/schema.prisma", content: prismaSchema },
-    { path: "/src/core/infra/lib/prisma.module.ts", content: prismaModuleTS },
+    { path: "/src/infra/lib/prisma.module.ts", content: prismaModuleTS },
     {
-      path: "/src/core/infra/database/database.module.ts",
+      path: "/src/infra/database/database.module.ts",
       content: databaseModuleTSImportingPrismaModule,
     },
     { path: "/src/app.module.ts", content: appModuleTSImportingDatabaseModule },
@@ -104,11 +104,11 @@ export async function createTypeORMStructure(projectPath, packageManager) {
   await createDirectories(typeormDirectories, projectPath);
   await createFiles(projectPath, [
     {
-      path: "/src/core/infra/database/typeorm/database.providers.ts",
+      path: "/src/infra/database/typeorm/database.providers.ts",
       content: typeORMDataSource,
     },
     {
-      path: "/src/core/infra/database/database.module.ts",
+      path: "/src/infra/database/database.module.ts",
       content: databaseModuleTSImportingDatabaseProvider,
     },
     { path: "/src/app.module.ts", content: appModuleTSImportingDatabaseModule },

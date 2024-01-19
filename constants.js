@@ -10,29 +10,29 @@ export const directories = [
   `src/core/application/interfaces`,
   `src/core/application/interfaces/repositories`,
   `src/core/application/use-cases`,
-  `src/core/infra`,
-  `src/core/infra/database`,
-  `src/core/infra/http`,
-  `src/core/infra/http/controllers`,
-  `src/core/infra/http/middlewares`,
-  `src/core/infra/http/dtos`,
-  `src/core/infra/http/interceptors`,
-  `src/core/infra/http/mappers`,
-  `src/core/infra/lib`,
-  `src/core/infra/util`,
+  `src/infra`,
+  `src/infra/database`,
+  `src/infra/http`,
+  `src/infra/http/controllers`,
+  `src/infra/http/middlewares`,
+  `src/infra/http/dtos`,
+  `src/infra/http/interceptors`,
+  `src/infra/http/mappers`,
+  `src/infra/lib`,
+  `src/infra/util`,
 ];
 
 // Diretórios específicos para Prisma ORM.
 export const prismaDirectories = [
-  `src/core/infra/database/prisma`,
-  `src/core/infra/database/prisma/repositories`,
+  `src/infra/database/prisma`,
+  `src/infra/database/prisma/repositories`,
 ];
 
 // Diretórios específicos para TypeORM.
 export const typeormDirectories = [
-  `src/core/infra/database/typeorm`,
-  `src/core/infra/database/typeorm/entities`,
-  `src/core/infra/database/typeorm/repositories`,
+  `src/infra/database/typeorm`,
+  `src/infra/database/typeorm/entities`,
+  `src/infra/database/typeorm/repositories`,
 ];
 
 // ------------------ Configurações NestJS ------------------
@@ -66,7 +66,7 @@ export class AppModule {}
 // Módulo raiz da aplicação NestJS, importando módulo de banco de dados.
 export const appModuleTSImportingDatabaseModule = `import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { DatabaseModule } from './core/infra/database/database.module';
+import { DatabaseModule } from './infra/database/database.module';
 
 @Module({
   imports: [
