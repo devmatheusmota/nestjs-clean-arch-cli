@@ -76,29 +76,28 @@ The generated project will have two different structures:
 │   │   │   ├── interfaces
 │   │   │   │   └── repositories
 │   │   │   └── use-cases
-│   │   ├── domain
-│   │   │   ├── entities
-│   │   │   ├── exceptions
-│   │   │   └── types
-│   │   └── infra
-│   │       ├── database
-│   │       │   ├── database.module.ts
-│   │       │   └── prisma
-│   │       │       └── repositories
-│   │       ├── http
-│   │       │   ├── controllers
-│   │       │   ├── dtos
-│   │       │   ├── interceptors
-│   │       │   ├── mappers
-│   │       │   └── middlewares
-│   │       ├── lib
-│   │       │   ├── prisma.module.ts
-│   │       │   └── prisma.service.ts
-│   │       └── util
+│   │   └── domain
+│   │       ├── entities
+│   │       ├── exceptions
+│   │       └── types
+│   ├── infra
+│   │   ├── database
+│   │   │   ├── database.module.ts
+│   │   │   └── prisma
+│   │   │       └── repositories
+│   │   ├── http
+│   │   │   ├── controllers
+│   │   │   ├── dtos
+│   │   │   ├── interceptors
+│   │   │   ├── mappers
+│   │   │   └── middlewares
+│   │   ├── lib
+│   │   │   ├── prisma.module.ts
+│   │   │   └── prisma.service.ts
+│   │   └── util
 │   └── main.ts
 └── ...
 ```
-
 
 ### TypeORM
 ```arduino
@@ -110,28 +109,29 @@ The generated project will have two different structures:
 │   │   │   ├── interfaces
 │   │   │   │   └── repositories
 │   │   │   └── use-cases
-│   │   ├── domain
-│   │   │   ├── entities
-│   │   │   ├── exceptions
-│   │   │   └── types
-│   │   └── infra
-│   │       ├── database
-│   │       │   ├── database.module.ts
-│   │       │   └── typeorm
-│   │       │       ├── database.providers.ts
-│   │       │       ├── entities
-│   │       │       └── repositories
-│   │       ├── http
-│   │       │   ├── controllers
-│   │       │   ├── dtos
-│   │       │   ├── interceptors
-│   │       │   ├── mappers
-│   │       │   └── middlewares
-│   │       ├── lib
-│   │       └── util
+│   │   └── domain
+│   │       ├── entities
+│   │       ├── exceptions
+│   │       └── types
+│   ├── infra
+│   │   ├── database
+│   │   │   ├── database.module.ts
+│   │   │   └── typeorm
+│   │   │       ├── database.providers.ts
+│   │   │       ├── entities
+│   │   │       └── repositories
+│   │   ├── http
+│   │   │   ├── controllers
+│   │   │   ├── dtos
+│   │   │   ├── interceptors
+│   │   │   ├── mappers
+│   │   │   └── middlewares
+│   │   ├── lib
+│   │   └── util
 │   └── main.ts
 └── ...
 ```
+
 ## Contributing
 
 Contributions to the NestJS Clean Architecture CLI are welcome! Please follow the standard process:
