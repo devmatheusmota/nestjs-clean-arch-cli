@@ -1,0 +1,29 @@
+{
+  "name": "nestjs-clean-arch-cli",
+  "version": "1.2.2",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nestjs",
+    "clean",
+    "architecture",
+    "cli"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "nest-clean-arch-cli": "./index.js",
+    "nca": "./index.js"
+  },
+  "dependencies": {
+    "@nestjs/cli": "^10.3.0",
+    "@nestjs/config": "^3.1.1",
+    "commander": "^11.1.0",
+    "execa": "^8.0.1",
+    "inquirer": "^9.2.12"
+  }
+}
