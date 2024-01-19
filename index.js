@@ -1,8 +1,13 @@
 #!/usr/bin/env node
 
 import { Command } from "commander";
-import pkg from "../package.json" assert { type: "json" };
+import fs from "fs";
+import { join } from "path";
 import { initService } from "./services.js";
+
+const packageJsonPath = join(process.cwd(), "package.json");
+const packageJsonContent = fs.readFileSync(packageJsonPath, "utf-8");
+const pkg = JSON.parse(packageJsonContent);
 
 const program = new Command();
 
