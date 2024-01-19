@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
 import { Command } from "commander";
+import pkg from "../package.json" assert { type: "json" };
 import { initService } from "./services.js";
 
 const program = new Command();
 
-program.name("nest-clean-architecture").version("0.0.1");
+program.name("nest-clean-architecture").version(pkg.version);
 
 program
   .command("init <project-name>")
