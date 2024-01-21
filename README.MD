@@ -92,8 +92,9 @@ The generated project will have two different structures:
 │   │   │   ├── mappers
 │   │   │   └── middlewares
 │   │   ├── lib
-│   │   │   ├── prisma.module.ts
-│   │   │   └── prisma.service.ts
+│   │   │   └─ prisma
+│   │   │       ├── prisma.module.ts
+│   │   │       └── prisma.service.ts
 │   │   └── util
 │   └── main.ts
 └── ...
