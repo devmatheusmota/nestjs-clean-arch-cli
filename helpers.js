@@ -61,9 +61,12 @@ export async function createPrismaStructure(projectPath, packageManager) {
   await initPrisma();
   await createDirectories(prismaDirectories, projectPath);
   await createFiles(projectPath, [
-    { path: "/src/infra/lib/prisma.service.ts", content: prismaServiceTS },
+    {
+      path: "/src/infra/lib/prisma/prisma.service.ts",
+      content: prismaServiceTS,
+    },
     { path: "/prisma/schema.prisma", content: prismaSchema },
-    { path: "/src/infra/lib/prisma.module.ts", content: prismaModuleTS },
+    { path: "/src/infra/lib/prisma/prisma.module.ts", content: prismaModuleTS },
     {
       path: "/src/infra/database/database.module.ts",
       content: databaseModuleTSImportingPrismaModule,

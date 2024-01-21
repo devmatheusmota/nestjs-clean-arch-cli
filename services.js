@@ -9,6 +9,7 @@ import {
 } from "./helpers.js";
 
 export const initService = async (projectName, options) => {
+  projectName = projectName.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
   let { packageManager, orm } = options;
   packageManager = packageManager || (await promptForPackageManager());
   await checkPackageManager(packageManager);

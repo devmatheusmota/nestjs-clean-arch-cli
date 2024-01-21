@@ -26,6 +26,7 @@ export const directories = [
 export const prismaDirectories = [
   `src/infra/database/prisma`,
   `src/infra/database/prisma/repositories`,
+  `src/infra/lib/prisma`,
 ];
 
 // Diretórios específicos para TypeORM.
@@ -166,7 +167,7 @@ model User {
 
 // Módulo de banco de dados para Prisma.
 export const databaseModuleTSImportingPrismaModule = `import { Module } from '@nestjs/common';
-import { PrismaModule } from './../lib/prisma.module';
+import { PrismaModule } from './../lib/prisma/prisma.module';
 
 @Module({
   exports: [],
