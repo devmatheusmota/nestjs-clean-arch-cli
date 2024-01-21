@@ -1,17 +1,11 @@
 #!/usr/bin/env node
 
 import { Command } from "commander";
-import fs from "fs";
-import { join } from "path";
 import { initService } from "./services.js";
-
-const packageJsonPath = join(process.cwd(), "package.json");
-const packageJsonContent = fs.readFileSync(packageJsonPath, "utf-8");
-const pkg = JSON.parse(packageJsonContent);
 
 const program = new Command();
 
-program.name("nest-clean-architecture").version(pkg.version);
+program.name("nest-clean-architecture").version("1.2.14");
 
 program
   .command("init <project-name>")
