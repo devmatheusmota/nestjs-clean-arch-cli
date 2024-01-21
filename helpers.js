@@ -58,7 +58,7 @@ async function installPackageManager(packageManager) {
 }
 
 export async function createPrismaStructure(projectPath, packageManager) {
-  await initPrisma(projectPath);
+  await initPrisma();
   await createDirectories(prismaDirectories, projectPath);
   await createFiles(projectPath, [
     { path: "/src/infra/lib/prisma.service.ts", content: prismaServiceTS },
@@ -115,7 +115,7 @@ export async function createTypeORMStructure(projectPath, packageManager) {
   ]);
 }
 
-async function initPrisma(projectPath) {
+async function initPrisma() {
   await execa("npx", ["prisma", "init"]);
 }
 
