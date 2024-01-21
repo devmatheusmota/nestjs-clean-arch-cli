@@ -20,12 +20,12 @@ Before you begin, ensure you have met the following requirements:
 Install the CLI globally by running:
 
 ```bash
-$ npm install -g nestjs-clean-architecture-cli
+$ npm install -g nestjs-clean-arch-cli
 ```
 
 Or if you prefer using yarn:
 ```bash
-$ yarn add -g nestjs-clean-architecture-cli
+$ yarn global add nestjs-clean-arch-cli
 ```
 
 Or if you don't want to install globally:
@@ -37,7 +37,7 @@ $ npx nca <command>
 
 To start a new NestJS project, run:
 ```bash
-$ nestjs-clean-architecture-cli init <project-name>
+$ nestjs-clean-arch-cli init <project-name>
 ```
 
 or 
