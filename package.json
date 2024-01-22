@@ -1,6 +1,6 @@
 {
   "name": "nestjs-clean-arch-cli",
-  "version": "1.2.14",
+  "version": "1.2.15",
   "description": "",
   "main": "index.js",
   "type": "module",

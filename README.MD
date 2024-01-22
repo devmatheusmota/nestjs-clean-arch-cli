@@ -135,6 +135,8 @@ The generated project will have two different structures:
 
 ## Contributing
 
+[Github](https://github.com/devmatheusmota/nestjs-clean-arch-cli)
+
 Contributions to the NestJS Clean Architecture CLI are welcome! Please follow the standard process:
 
 1. Fork the repository.
